@@ -1,6 +1,8 @@
 var gulp      = require('gulp'), // Подключаем Gulp
     sass        = require('gulp-sass'), //Подключаем Sass пакет,
     browserSync = require('browser-sync'); // Подключаем Browser Sync
+    concat      = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
+    uglify      = require('gulp-uglifyjs'); // Подключаем gulp-uglifyjs (для сжатия JS)
 
 
 
@@ -23,6 +25,16 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
         },
         notify: false // Отключаем уведомления
     });
+});
+
+gulp.task('scripts', function() {
+    return gulp.src([ // Берем все необходимые библиотеки
+        'app/libs/jquery/dist/jquery.min.js' // Берем jQuery
+        
+        ])
+        .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
+        .pipe(uglify()) // Сжимаем JS файл
+        .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 });
 
 gulp.task('watch', ['browser-sync', 'sass'], function() {

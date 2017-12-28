@@ -1,0 +1,21 @@
+mpn init 
+
+npm install --save-dev gulp-install
+
+touch gulpfile.js
+
+npm i gulp-sass --save-dev
+
+npm link gulp (если таски на запускаются)
+
+npm i browser-sync --save-dev (устанавливаем browser-sync)
+
+npm install -g bower (устанавливаем bower -g глобально)
+	
+	Фиксит права доступа на файлы
+	sudo chown -R $USER:$GROUP ~/.npm
+	sudo chown -R $USER:$GROUP ~/.config
+
+bower i jquery 
+
+npm i --save-dev gulp-concat gulp-uglifyjs (устанавливаем gulp-concat (щбъеденяет js) gulp-uglifyjs (жмет js) )

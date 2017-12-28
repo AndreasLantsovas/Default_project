@@ -1,2 +1,14 @@
 body {
-  background-color: #cecae6; }
+  background-color: #c1c1c1;
+  font-family: "PT Serif", serif; }
+
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: white;
+  height: 100vh; }
+  .wrapper .row {
+    padding-top: 10%; }
+    .wrapper .row p {
+      font-size: 80px;
+      text-align: center; }
