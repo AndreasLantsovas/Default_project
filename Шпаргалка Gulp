@@ -19,3 +19,6 @@ npm install -g bower (устанавливаем bower -g глобально)
 bower i jquery 
 
 npm i --save-dev gulp-concat gulp-uglifyjs (устанавливаем gulp-concat (щбъеденяет js) gulp-uglifyjs (жмет js) )
+
+
+$ npm install --save-dev gulp-autoprefixer
